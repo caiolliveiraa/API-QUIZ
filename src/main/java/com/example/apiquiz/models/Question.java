@@ -1,10 +1,9 @@
-package models.models;
+package com.example.apiquiz.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import com.example.demo.model.Cliente;
 
 import jakarta.persistence.*;
 
@@ -24,7 +23,7 @@ public class Question {
     @OneToOne(mappedBy = "questions")
     private Category category;
 
-
-
-
 }
+
+
+
