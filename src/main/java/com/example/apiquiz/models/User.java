@@ -1,10 +1,8 @@
-package models;
+package com.example.apiquiz.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import com.example.demo.model.Endereco;
 
 import jakarta.persistence.*;
 
@@ -24,7 +22,6 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "rank_place", referencedColumnName = "place")
     private Ranking place;
-
 
 
 }

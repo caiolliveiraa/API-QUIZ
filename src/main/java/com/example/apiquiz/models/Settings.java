@@ -1,28 +1,21 @@
-package models.models;
+package com.example.apiquiz.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import com.example.demo.model.Cliente;
-
 import jakarta.persistence.*;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 
-public class Question {
+public class Settings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String question;
-    private Answer answer;
-    private int point;
 
-    @OneToOne(mappedBy = "questions")
+    private Level level;
     private Category category;
+
 
 
 
