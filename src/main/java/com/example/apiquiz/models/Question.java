@@ -1,5 +1,6 @@
 package com.example.apiquiz.models;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,10 +18,13 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String question;
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Answer answer;
+
     private int point;
 
-    @OneToOne(mappedBy = "questions")
+    @ManyToOne
     private Category category;
 
 }

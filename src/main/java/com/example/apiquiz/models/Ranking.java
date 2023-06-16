@@ -1,5 +1,6 @@
 package com.example.apiquiz.models;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +20,5 @@ public class Ranking {
 
     @OneToMany(mappedBy = "ranking")
     private List<User> UserRank;
-
-
 
 }
