@@ -1,5 +1,6 @@
 package com.example.apiquiz.models;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +21,5 @@ public class Answer {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id", referencedColumnName = "id")
     private Question question;
-
-
 
 }
