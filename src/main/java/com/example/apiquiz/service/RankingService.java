@@ -36,8 +36,6 @@ public class RankingService {
         Optional<Ranking> rankingOptional = rankingRepository.findByPlace(place);
         if (rankingOptional.isPresent()) {
             Ranking ranking = rankingOptional.get();
-            ranking.setPoints(updatedRanking.getPoints());
-            ranking.setUserRank(updatedRanking.getUserRank());
             return rankingRepository.save(ranking);
         } else {
             return null;

@@ -33,8 +33,6 @@ public class CategoryService {
     }
 
     public Category updateCategory(Category existingCategory, Category updatedCategory) {
-        existingCategory.setCategory(updatedCategory.getCategory());
-        existingCategory.setQuestions(updatedCategory.getQuestions());
         return categoryRepository.save(existingCategory);
     }
 
