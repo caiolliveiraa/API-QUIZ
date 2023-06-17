@@ -36,10 +36,6 @@ public class QuestionService {
         Optional<Question> questionOptional = questionRepository.findById(id);
         if (questionOptional.isPresent()) {
             Question question = questionOptional.get();
-            question.setQuestion(updatedQuestion.getQuestion());
-            question.setAnswer(updatedQuestion.getAnswer());
-            question.setPoint(updatedQuestion.getPoint());
-            question.setCategory(updatedQuestion.getCategory());
             return questionRepository.save(question);
         } else {
             return null;

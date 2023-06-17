@@ -29,8 +29,6 @@ public class AnswerService {
     }
 
     public Answer updateAnswer(Answer existingAnswer, Answer updatedAnswer) {
-        existingAnswer.setAnswer(updatedAnswer.getAnswer());
-        existingAnswer.setQuestion(updatedAnswer.getQuestion());
         return answerRepository.save(existingAnswer);
     }
 

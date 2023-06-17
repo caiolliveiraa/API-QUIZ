@@ -31,8 +31,6 @@ public class SettingsService {
         Optional<Settings> settingsOptional = settingsRepository.findById(id);
         if (settingsOptional.isPresent()) {
             Settings settings = settingsOptional.get();
-            settings.setLevel(updatedSettings.getLevel());
-            settings.setCategory(updatedSettings.getCategory());
             return settingsRepository.save(settings);
         } else {
             return null;
